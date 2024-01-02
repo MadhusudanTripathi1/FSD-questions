@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body,html{
+            height: 100%;
+            width: 100%;
+            background-color: orange;
+        }
+        .content{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-direction: row;
+            padding: 90px;
+        }
+
+        #text ,#text1, #text2{
+            font-size: 30px;
+            font-weight: 600;
+            display: block;
+            margin-top: 30px;
+        }
+
+        #btn ,#btn1, #btn2{
+            height: 40px;
+            width: 80px;
+            border-radius: 10px;
+            background-color: black;
+            color: WHITE;
+            border: none;
+            margin-top: 40px;
+        }
+
+        #btn:hover ,#btn1:hover,#btn2:hover{
+            height: 45px;
+            width: 85px;
+            transition: ease-out;  
+            box-shadow:4px 4px 10px black ,inset 4px 4px 10px rgba(255, 166, 0, 0.564);  
+         }
+
+         .inside{
+            display: flex;
+            padding: 40px;
+            align-items: center;
+            flex-direction: column;
+            margin-top: 170px;
+            background: transparent;
+            height: 250px;
+            width: 300px;
+            box-shadow: 10px 10px 20px black ,inset 10px 10px 20px black;
+            margin-top: 100px;
+            border: none;
+            border-radius: 10px; 
+            }
+
+         #heading ,#heading1{
+            font-size: 30px;
+            display: none;
+            font-weight: 600;
+         }
+
+         .main_head{
+            position: absolute;
+            margin-top: 70px;
+            margin-left: 495px;
+            font-size:50px ;
+         }
+
+         .head_bottom{
+            position: absolute;
+            font-size:50px ;
+            margin-left: 495px;
+         }
+         /* #move{
+            display: none;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            left: 50%;
+            top: 50%;
+         } */
+    </style>
+</head>
+<body>
+    <h1 class="main_head">JAI SHREE RAM</h1>
+    <div class="content">
+        <!-- <p id="move">MAGIC HAPPEND!!</p> -->
+        <div id="ques1"  class="inside">
+            <p id="text">Hello, World!</p>
+            <button id="btn" onclick="hide()">HideText</button>
+        </div>
+        <div id="ques2" class="inside">
+            <p id="text1" >Hello, World!</p>
+            <h1 id="heading">WELCOME TO PSITCHE</h1>
+            <button id="btn1" onclick="showtext()">HideText</button>
+        </div>
+        <div id="ques3" class="inside">
+            <p id="text2">Hello, World!</p>
+            <h1 id="heading1">MERN STACK</h1>
+            <button id="btn2" onclick="addtext()">HideText</button>
+        </div>
+    </div>
+    <h1 class="head_bottom">FSD QUESTIONS</h1>
+    <script>
+        function hide(){
+            var txt = document.getElementById("text");
+            if(txt.style.display == 'none')
+            txt.style.display = 'block';
+            else
+            txt.style.display = 'none';
+        }
+
+        function showtext(){
+            var p = document.getElementById("text1");
+            var h = document.getElementById("heading");
+            if(p.style.display == 'block')
+            {
+                p.style.display = 'none';
+                h.style.display = 'block';
+            }
+            else{
+                h.style.display = 'none';
+                p.style.display = 'block';
+            }
+        }
+
+        function addtext(){
+            var h = document.getElementById("heading1");
+            if(h.style.display == 'none')
+            h.style.display='block';
+            else
+            h.style.display='none';
+        }
+
+        // function movetext(){
+        //     var txt = document.getElementById("move");
+        //     if(txt.style.display == 'none')
+        //     {
+        //         var x = Math.random() * (window.innerWidth - txt.clientWidth);
+        //         var y = Math.random() * (window.innerHeight - txt.clientHeight);
+
+        //         txt.style.left = x + "px";
+        //         txt.style.top = y + "px";
+        //     }
+        //     else{
+        //         txt.style.display = 'none';
+        //     }
+        // }
+    </script>
+</body>
+</html>
